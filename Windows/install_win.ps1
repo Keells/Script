@@ -1,0 +1,18 @@
+##################################################
+##                                              ##
+##          Louise Adonel                       ##
+##          Avril 2020   V1                       ##
+##                                              ##
+##################################################
+
+Install-Package -Force -Confirm -Name NuGet
+
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+Install-Module -Force -Confirm PSWindowsUpdate
+
+set-executionpolicy unrestricted
+
+choco install python
+
+python win_installation.py
